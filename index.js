@@ -19,5 +19,4 @@ function handleSubmit(event) {
   `;
   grid.appendChild(card);
   form.reset();
-  
 }
