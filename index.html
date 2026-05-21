@@ -1,22 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Potfolio</title>
-</head>
-<body>
-    <h1 class="text-3xl font-bold underline text-emerald-600">
+  </head>
+  <body class="bg-gradient-to-br from-rose-100 to-teal-100 p-8 bg-fixed min-h-screen">
+    <!-- main container -->
+    <div class="max-w-4xl mx-auto">
+      <!-- Title -->
+      <h1 class="text-4xl font-extrabold text-emerald-600 mb-8 text-center">
         Welcome to my portfolio!
       </h1>
-      <form>
 
-        <button type="submit">Click Me!</button>
+      <!-- Form-->
+      <form
+        id="form"
+        class="bg-white p-6 rounded-lg shadow-md mb-12 flex flex-col gap-4"
+      >
+        <input
+          type="text"
+          id="title"
+          placeholder="Título de la imagen"
+          class="border p-2 rounded"
+          required
+        />
+        <input
+          type="url"
+          id="src"
+          placeholder="Enlace de la imagen"
+          class="border p-2 rounded"
+          required
+        />
+        <textarea
+          id="description"
+          placeholder="Descripción"
+          class="border p-2 rounded"
+          required
+        ></textarea>
+        <button
+          type="submit"
+          class="bg-emerald-600 text-white py-2 rounded font-bold hover:bg-emerald-700 transition"
+        >
+          Añadir al Portfolio
+        </button>
       </form>
 
+      <!-- Card grid -->
+      <div
+        id="card-grid"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      >
+        <!-- List of cards  -->
+      </div>
+    </div>
+
     <script type="text/javascript" src="./index.js"></script>
-</body>
+  </body>
 </html>
